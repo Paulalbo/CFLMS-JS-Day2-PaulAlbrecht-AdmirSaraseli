@@ -9,9 +9,6 @@ for (i = 1; i <= 100; i++) {
 		if (i % 5 == 0) {
 			document.write("Buzz")
 		}
-		if (i % 15 == 0) {
-			document.write("FizzBuzz")
-		}
 	}
 	document.write("<br>")
 }
