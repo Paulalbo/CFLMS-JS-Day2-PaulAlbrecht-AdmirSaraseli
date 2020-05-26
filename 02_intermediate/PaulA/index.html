@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+<style type="text/css">
+	h1,p {
+		text-align: center;
+		font-family: 'Roboto', sans-serif;
+	}
+
+	h1 {
+		font-size: 3em;
+	}
+
+	p {
+		font-size: 2em;
+	}
+	div {
+
+		display: flex; 
+    	justify-content: center; 
+    	align-items: center;
+	}
+	img {
+		max-height: 500px;
+	}
+
+	button {
+		background-color: #353841;
+		color: white;
+		font-size: 1.5em;
+		border-radius: 15px;
+		padding: 1%;
+	}
+
+	button:hover {
+		border-radius: 15px;
+		background-color: white;
+		color: black;
+		cursor: pointer;
+	}
+
+	@media screen and (max-width: 480px) {
+  		p {
+    		font-size: 5em;
+  		}
+  		img {
+  			max-width: 80vw;
+  		}
+  		hr {
+  			display: none;
+  		}
+	}
+
+</style>
+</head>
+<body>
+
+<h1>Temperature v2.0</h1>
+<script>
+	let min = -5; 
+	let max = 39;
+	var randomNum = Math.floor(Math.random() * max)+ min;
+	document.write("<p>" + randomNum + "c" + "</p>" + "<br>");
+
+	if (randomNum >= 30) {
+   		document.write("<br>" + "<div><img src=\"img/hot.gif\"></div>" + "<br>" + "<p>The weather is Hot.</p>")
+	} 
+	else {
+		if (randomNum >= 10) {
+   		document.write("<br>" + "<div><img src=\"img/moderate.jpeg\"></div>" + "<br>" + "<p>The weather is moderate.</p>")} 
+		else{document.write("<br>" + "<div><img src=\"img/cold.jpg\"></div>" + "<br>" + "<p>The weather is cold</p>")}
+	}
+
+</script>
+<div><button onClick="window.history.go(0);"><nobr>Refesh Page</nobr></button></div>
+<br>
+<hr>
+<br>
+<h1>Exercise 2</h1>
+<p>
+<script>
+	var array1 = [1, 7, -3, 9];
+	document.write(Math.max(...array1))
+
+</script>
+</p>
+</body>
+</html>
